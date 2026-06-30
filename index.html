@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日常挑戰</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'MyFreehandFont';
+  src: url(data:font/otf;base64,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jomLCH+LYKRuowh4mnOahosIhYuBgYuFCIuEkIWYggiRh5t/mIEIpXeVhaR/CJuDBWF8gIdVdghje3SBYHYIbXwFjtKLjIaRCISTg4uDgwiEhYuLikoIifsDlmKqiwiXi5WTi5QIi5GBloaLCIaLg7mLqAiLmIyOjYkIkIaUja2bCLehko69nwiilKCTjowIkY6LipVsCJJ3jXSOTAiMbIx+jogIjoiKioOHCIaJhYmJiwh6i3h+i4AIi3eriLiaCM+ikIyFhAiFhYuKjWEIjXOMd4uLCImHWYZGhwhAh4SKhoYIhISLg5ODCJKFBfcXkrmOlI0InY6OiYt+CIuHj3SPcgij+yOLi40+CI1Hi4eQhgiShJOLkpMIkJEFiPcxipFz9xsIgcGKk5GLCI6LoJCikQjUncOVo4wIoowFll2IZ35lCH5kh4R9hgh2g4V/l4AIkoWMi5yOCJWNlY6NjQiUlJuqlakIlauLi4uxCIvBgqx8jwh0kD+AK3QIUn2Qi4qVCIqPip6KnQiKroeVgIwIhoyTjr6bCMufrZSbjQivj4urZ4kIeoqLjZuaCJCQlJWQkgiRkpeZlJUIv8SKtlWPCHiMbpV8lQh8lX6OZIsIZosFq6iutouSCIuSgZWEiwiHi4SGgoEId3Vra3R2CHd5BYz3AYuMhZEIg5ODi4SECPc6+yEVkYmTh4+ICJmBrH+digiUipOKi4oIi4V6cnt4CIB/eneAfwh1cnx/gIsIgYuBgY2CCIyFioprgQh5hXqGiYoIiYqQkJORCNnHmq9rvAh9oISNV4sIX4sFjp8F3J+6jaGDCPtQZxWKiIaEhoYIgoIFhpmJkIqMCIqMopSRiwiMi4uIiocI9wlpFZOIlXiLfwiLgHhydnsIeX1da36ECIaIhIeIiQiFhwWIzYqoipYIiqAFpaSNjJiMCKmNvIuRiQj72vvEFYSEi4maaAidYJCCnXUIzDy1ZqiICKmHkKptkQh5j2+iaLMIY7mBmYCmCIWZhJuJkAiCoH2SgH8IDvp8+Zj5oRWAgIt0lnoIkISPhIuKCIuKkoCTfwiTf5R9jYYIlXeWhpWWCJSWh5ZzrghvtoiQjJkIjKF7ln9+CPujahWKin2Je4kIbYiAhouCCIuKiImIiwiFi4CBi4UIi4SoNZR5CJF+BXp6ioOTgwiShZKKkpAIkI6Mi5ODCJ15m5WLqAiLnQXV25OaiqsIiq2IjV2MCHiLeouKigj3IIYVgYCCRYxMCIxXBYKLfox/jQh1joqLhYUIeHmjfLqLCJKLkYuLiwiLi4x9jHoIjmaj+wCYagiPgpN3kXwIkXyReo2GCI2GjoKNhQiPgAV6eIB+hIIIdG5bYHB6CICEdn58ggh8gn6DiooIiouFh4WHCHZ9h4GWgQiTg5CLmJQIkY+RjoyLCIyLk5CTkQiTkZOQjIsIjIuRj5KQCJKQkY+MiwiLi5aSmJMIsKPCv6WvCI+Qj4+MiwiMi5J+knsIpk+uVJ5+CK9zr4SklwiflJKckL8IjrOTupCXCJCYi5CEkghzonpggiAIiXSGeYaICIKGdI95lAh6k4mNeaYIgJt/n4eUCHqtdLyLjQiLkLXPl5oIkpOVl5GSCKyxkJWBlQh/loCEcGgIhIN+e4KACIGAg4GLigiLiomHiIcIiIeGg4eFCIiEh4aKiwiKi4SahJ0IhJ2Co4eWCIeWhZ6ImAiImIWnhqAIhaSHooqdCIqmBbmL9wygrpYIqpWTln6YCISSgYt6hQhzgvsYc3GLCH2LBYatjcSSvAiSvQV9mYOLhIMI/FuGFYODi4mTagiQeJN3mm0ImHGSeoqKCISElXmViwiOi42Ki4oIi4eZgJCLCJCLi4uGhAiGhIuFi1MIi04Fcr2DnoqRCIW9e6B6eQiFhAWTaY58jIUIjIWWcZlvCJhwnGaTeQibZ5GClIsIm4uPoIS6CIO7i5iRiwiOi5mPmZAImZCgkJaNCJaMmI2QjAiUjQWLQIqKbYsIY4p6hIt8CIt/loadjgiUjZyMl4sIoIsFiVIF+x1VRXpTiwh0i4KGi38Ii2v3D5v3ErwIoJOeko2MCJGOjPtJhYMIfnukd5qaCJSUjJKL9AiL8wWgkaiSp5EIxpifjKGDCJ2FjouSkgidn26dWYsIc4sreXSCCIeJi42LpAiLpgWajaCNn40Iq42SjJCPCJeWgZt4iwiBiwWLz4uPkI8Ik5OEnoCLCIqLhZOFlAiAm3See5EIXZ2Ni0+LCF2LgYqGiAiGhwWLqwXPzJuhi5wIi6qBkVGOCHWNco2EjAh5jYOFi3sIi4GLi4acCIOnf5R/fgj4BmsVjH+AeHJwCHNyBXyzhJ6IlQiFnQWdj6yOnosIn4sF+29vFY2KioiFgwiCfmBfio4IiZSBsIiWCIiYBcOKnYqNigje+z4VloiTh4mKCIGIhoKLfgiLfQVohXyIhYoIf4pjf4KGCIWIBY7kh4jEiwi1i4+LnoQIvHIVloGLi32JCICKBYuaiZCHjwiFkgWYhJOFkIYIo0MVi2yLi3iACHeAi4yMswiMrwWXjZOMkYsIlowFDvp89+b5YhWGhYmFinwIiXqPRo57CIyFiot+iAhnhG6Ib4sIbouJi4aFCHNxwIHdmQicjpqNjIoIjYiP+wqLOwiLMwV7h4KIZHwIg4iCiIeKCIeKhomIiQiBhSJxZYQIVYJ8got2CIt5oXXHZAiVhJiCkYcIkIeRiIyLCIyLl4OZgQiZgqJ8mYIImYKefZWDCKV2oIKdjAigjZCRj6QIjpyX90+NwgiLngXqrJaVe5oIg5KKi2F8CHeEeoWKiwiKi4qyi7sIi7qKyYqoCIqniqOMjAiMjJuMnowIsI2UjouYCIuZgo5kighnigWFv4qyjp0IjZ2LjIWRCIOUg4uDggj4NGYVhYWLiYtACIs+BXU0fViCawhxL4Nci1YIi1qSZJd1CKNhpm+fhgiihe6OnpIIrZiYnJW2CJCdBXmeeoKIdwiDX3eBP4sIWouEjXyaCFDGiOC890IIlKqVsY+aCI6akaSPmwiTpwWL9zoFfZiEi4SECPsngxWFhQWI++uKf3uACIWHeXt7fAhpanl/dokIc4mBfJl+CJSDq42dlQialKqjj5EIjY6SkpKRCJiWBYVmhjKLXAiLXYuGhoMIhICLg5KECJODkoyTlQiXmoyRi78Ii8KOuJPOCJC5jI2SkgiUlIyThJIIh46KjoyQCIyOjdiM5QiN9zeLjIaRCISSg4uDgwj3u/tZFUNjbm2cewiUgpCNnp0IlZSWlI+NCI+NkY6PjQionpWOqYsIqouUj4uYCIuYgo5miwhpiwX8XVIVgoGOgZqCCI2KnImeiginipSKlIcImoSPi5KSCJOTi5KDkwh+mICOZ40IeIx3jYWMCIKMiYqGhgj3zPtPFYSDi4OShAj2K4aPqoQIroSdi5KTCJaWgpt6iwiGi3yNfY4IcpAFJuaEj39/CPxCbBWLhYp1incIineIW4lkCIdJinuIgAiJhnSWfpcIgJX7HOeHiwiKi4GSgJMIgJN6l4KSCIKShJKMjQiLjZ2PoY8IoI+okZiPCJmPo5Kcjwibj5yQkI0IkI2bkZqRCJuRm5GPjQiWkYuLi38IDvp8+TL5qhX7GIM3gkd+CF2DU36DhwiIin2JfIoIZ4l+f5t8CJKEt42kkwjJoPcPnvcalQjbkfc6jJqFCJWHBYv7R4psiHEIhmqKeoP7RAiJWYdPiXQIhmAFeox0jXaNCFCS+z2LSoQIU4VMgGKACHWFf4l4iwhyi3+Fi34Ii3e0icubCL2Yu5PFkQjPkvc8isiDCLCGBYt/iIWFhQiAf4qFk4MImX6lm4+jCIuQjpmOlwiTrZLrkfcoCI7Qj72PqQiOoI73ZYiYCIWqd5D7CYoIW4peioSLCPySKBWEhIxoknAIj3yeN5NnCJJqkWONbQiMfY11jH4IkkeQN4tjCIxfi4qRhgiThJKLkpIIlZWJ6H73HAiF0IuLkY0Ijoz3Aoz3F4sI956LzY2VlAiSkouTg5IIhJEFMIYiivssiwj7gosFipSJlYqUCIeqcfcKhpkIio+JmomZCIevgJd8ewgOAAJYAAABLAAAASwAAAJYAAAD6AAAAfQAAAPoAAAD6AAAA+gAAAPoAAAD6AAAAAAAAQAAAAAAAAACABQAAgAWAAVlbnpoLVRXAA==) format('opentype');
+  font-display: swap;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* 極簡黑白灰，保留一個點綴色 */
+  --ink: #161616;
+  --paper: #fafafa;
+  --line: #ebebeb;
+  --muted: #8a8a8a;
+  --accent: #d34f2c;
+  --ff: 'Noto Sans TC', -apple-system, sans-serif;
+}
+
+html { font-size: 17px; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--ff);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 唯一的留白容器，所有內容垂直疊放，靠它呼吸 */
+.page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 14vh 32px 18vh;
+}
+
+/* 一句話標頭：取代整個 masthead，只留品牌名 */
+.top-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+.brand {
+  font-family: 'MyFreehandFont', var(--ff);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* 每日心法跑馬燈：細灰字、慢速捲動，不搶視覺重量 */
+.marquee-wrap {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right;
+}
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee-scroll 70s linear infinite;
+  padding-left: 100%;
+}
+.marquee-track span { padding: 0 24px; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; padding-left: 0; }
+}
+
+/* Hero：完成數，唯一的視覺重量來源 */
+.hero {
+  margin-bottom: 88px;
+}
+.hero .num {
+  font-size: clamp(72px, 18vw, 128px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.hero .lbl {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* 挑戰內容：沒有外框、沒有標籤色塊，純文字層級 */
+.challenge {
+  margin-bottom: 56px;
+}
+.challenge-eyebrow {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.challenge-headline {
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 14px;
+  min-height: 80px;
+  transition: opacity 0.2s;
+}
+.challenge-headline.fading { opacity: 0; }
+.challenge-tag {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+.challenge-tag:empty { display: none; }
+
+/* 按鈕：無框線、無底色裝飾，靠字重與間距區分主次 */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 56px;
+}
+.btn {
+  font-family: var(--ff);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--ink);
+  transition: opacity 0.15s;
+}
+.btn:hover { opacity: 0.6; }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.btn.primary { color: var(--ink); }
+.btn.done { color: var(--accent); }
+
+/* 完成紀錄：固定高度可滾動，無邊框，行與行只靠留白分隔 */
+.log {
+  padding-top: 24px;
+}
+.log-head {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+#historyList {
+  max-height: 220px;
+  overflow-y: auto;
+}
+.history-empty {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.history-entry {
+  padding: 10px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  animation: fadeIn 0.25s ease;
+}
+.history-entry .h-text { color: var(--ink); }
+.history-entry .h-time { color: var(--muted); font-size: 12px; margin-left: 6px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .page { padding: 10vh 24px 14vh; }
+  .hero { margin-bottom: 64px; }
+  .challenge { margin-bottom: 40px; }
+  .actions { gap: 20px; }
+  .marquee-wrap { display: none; }
+}
+</style>
+</head>
+<body>
+
+<main class="page">
+  <div class="top-row">
+    <div class="brand">日常挑戰</div>
+    <div class="marquee-wrap" aria-label="每日心法">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="num" id="completedNum">0</div>
+    <div class="lbl">已完成挑戰</div>
+  </div>
+
+  <div class="challenge">
+    <div class="challenge-eyebrow">今天的挑戰</div>
+    <div class="challenge-headline" id="challengeHead" aria-live="polite">
+      按下「抽取」，看看今天要做什麼。
+    </div>
+    <div class="challenge-tag" id="tagsRow" aria-live="polite"></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn primary" onclick="rollChallenge()" aria-label="抽取新挑戰">抽取</button>
+    <button class="btn done" onclick="markDone()" aria-label="標記目前挑戰已完成">完成</button>
+  </div>
+
+  <div class="log">
+    <div class="log-head">完成紀錄</div>
+    <div id="historyList" aria-live="polite" aria-label="完成紀錄">
+      <div class="history-empty">還沒有紀錄，抽一個開始吧。</div>
+    </div>
+  </div>
+</main>
+
+<script>
+const challenges = [
+  { text:"對三個陌生人微笑，觀察他們的反應。", tag:"社交" },
+  { text:"用非慣用手寫下今天的日期與自己的名字。", tag:"肢體" },
+  { text:"找一首從沒聽過的歌，完整聽完，不快轉。", tag:"感官" },
+  { text:"找出今天一個你從未注意過的美麗細節，拍下來。", tag:"觀察" },
+  { text:"吃飯時手機翻面放下，專心感受食物的味道。", tag:"專注" },
+  { text:"傳一則真心話給你好久沒聯絡的朋友。", tag:"人際" },
+  { text:"出門時刻意走一條沒走過的路，感受有什麼不同。", tag:"探索" },
+  { text:"隨機翻開一本書的某頁，讀完那一頁再放下。", tag:"閱讀" },
+  { text:"靜靜聆聽五分鐘環境聲音，不滑手機，只是聽。", tag:"冥想" },
+  { text:"做一件一直在拖延的小事，哪怕只有五分鐘。", tag:"行動" },
+  { text:"嘗試自己做一樣從沒做過的食物或飲料。", tag:"生活" },
+  { text:"主動稱讚今天遇到的某個人，說出具體的理由。", tag:"正向" },
+  { text:"寫下三件今天讓你感謝的小事，越具體越好。", tag:"感恩" },
+  { text:"用三個詞描述你今天的心情，想清楚再寫。", tag:"內省" },
+  { text:"今晚比平常早30分鐘關燈，在黑暗中靜靜想一件事。", tag:"睡眠" },
+];
+
+let completedCount = 0;
+let currentChallenge = null;
+let lastChallenge = null;
+const MAX_HISTORY = 20;
+const history = [];
+
+// 每日心法跑馬燈
+const dailyMottos = [
+  "不要等「完美時機」，現在就是最好的時間點。",
+  "挑戰不在於難度，在於你願意打破慣性的那一秒。",
+  "完成後記得給自己一點肯定，這是真正的積累。",
+  "如果今天做不到，明天重抽。沒有失敗，只有下一次。"
+];
+const marqueeTrack = document.getElementById('marqueeTrack');
+marqueeTrack.innerHTML = [...dailyMottos, ...dailyMottos]
+  .map(m => `<span>${m}</span>`)
+  .join('');
+
+function rollChallenge() {
+  let pick;
+  if (lastChallenge) {
+    const filtered = challenges.filter(c => c.text !== lastChallenge.text);
+    pick = filtered[Math.floor(Math.random() * filtered.length)];
+  } else {
+    pick = challenges[Math.floor(Math.random() * challenges.length)];
+  }
+  currentChallenge = pick;
+
+  const head = document.getElementById('challengeHead');
+  head.classList.add('fading');
+  setTimeout(() => {
+    head.textContent = pick.text;
+    head.classList.remove('fading');
+  }, 200);
+
+  document.getElementById('tagsRow').textContent = pick.tag;
+}
+
+function markDone() {
+  if (!currentChallenge) {
+    rollChallenge();
+    return;
+  }
+  completedCount++;
+  document.getElementById('completedNum').textContent = completedCount;
+
+  const now = new Date();
+  lastChallenge = currentChallenge;
+
+  history.unshift({
+    ...currentChallenge,
+    time: now.toLocaleTimeString('zh-TW', { hour:'2-digit', minute:'2-digit' })
+  });
+  if (history.length > MAX_HISTORY) history.splice(MAX_HISTORY);
+
+  renderHistory();
+  currentChallenge = null;
+  rollChallenge();
+}
+
+function renderHistory() {
+  const list = document.getElementById('historyList');
+  if (!history.length) {
+    list.innerHTML = '<div class="history-empty">還沒有紀錄，抽一個開始吧。</div>';
+    return;
+  }
+  list.innerHTML = history.map(h => `
+    <div class="history-entry">
+      <span class="h-text">${h.text}</span>
+      <span class="h-time">${h.time}</span>
+    </div>
+  `).join('');
+}
+</script>
+</body>
+</html>
