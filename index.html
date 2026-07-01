@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="每天抽一個小挑戰，累積微小的改變。">
-<meta name="theme-color" content="#fafafa">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131313" media="(prefers-color-scheme: dark)">
 <title>日常挑戰</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -24,6 +25,16 @@
   --muted: #8a8a8a;
   --accent: #d34f2c;
   --ff: 'Noto Sans TC', -apple-system, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f0f0f0;
+    --paper: #131313;
+    --line: #2a2a2a;
+    --muted: #8f8f8f;
+    --accent: #ff8362;
+  }
 }
 
 html { font-size: 17px; }
@@ -244,7 +255,7 @@ body {
 
   <div class="actions">
     <button class="btn primary" id="rollBtn" onclick="rollChallenge()" aria-label="抽取新挑戰">抽取</button>
-    <button class="btn done" id="doneBtn" onclick="markDone()" aria-label="標記目前挑戰已完成">完成</button>
+    <button class="btn done" id="doneBtn" onclick="markDone()" aria-label="標記目前挑戰已完成" disabled>完成</button>
   </div>
 
   <div class="log">
@@ -429,10 +440,7 @@ function formatDateLabel(date) {
 }
 
 function markDone() {
-  if (!currentChallenge) {
-    rollChallenge();
-    return;
-  }
+  if (!currentChallenge) return;
   completedCount++;
   els.num.textContent = completedCount;
 
