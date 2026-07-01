@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="每天抽一個小挑戰，累積微小的改變。">
+<meta name="theme-color" content="#fafafa">
 <title>日常挑戰</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -125,6 +127,12 @@ body {
   transition: opacity 0.2s;
 }
 .challenge-headline.fading { opacity: 0; }
+.challenge-headline.is-done {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+}
 .challenge-tag {
   display: inline-block;
   font-size: 12px;
@@ -157,6 +165,7 @@ body {
 }
 .btn:hover { opacity: 0.6; }
 .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
 .btn.primary { color: var(--ink); }
 .btn.done { color: var(--accent); }
 
@@ -186,6 +195,15 @@ body {
 }
 .history-entry .h-text { color: var(--ink); }
 .history-entry .h-time { color: var(--muted); font-size: 12px; margin-left: 6px; }
+
+.history-date {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  padding-top: 14px;
+  padding-bottom: 2px;
+}
+.history-date:first-child { padding-top: 0; }
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -225,8 +243,8 @@ body {
   </div>
 
   <div class="actions">
-    <button class="btn primary" onclick="rollChallenge()" aria-label="抽取新挑戰">抽取</button>
-    <button class="btn done" onclick="markDone()" aria-label="標記目前挑戰已完成">完成</button>
+    <button class="btn primary" id="rollBtn" onclick="rollChallenge()" aria-label="抽取新挑戰">抽取</button>
+    <button class="btn done" id="doneBtn" onclick="markDone()" aria-label="標記目前挑戰已完成">完成</button>
   </div>
 
   <div class="log">
@@ -254,29 +272,132 @@ const challenges = [
   { text:"寫下三件今天讓你感謝的小事，越具體越好。", tag:"感恩" },
   { text:"用三個詞描述你今天的心情，想清楚再寫。", tag:"內省" },
   { text:"今晚比平常早30分鐘關燈，在黑暗中靜靜想一件事。", tag:"睡眠" },
+  { text:"今天出門刻意跟一位服務人員多聊兩句，說聲謝謝。", tag:"人際" },
+  { text:"把手機通知全部關掉一整天，感受差異。", tag:"專注" },
+  { text:"寫一張紙條留給家人或室友，表達關心。", tag:"人際" },
+  { text:"整理書桌，只留下今天真正會用到的東西。", tag:"整理" },
+  { text:"用手繪的方式畫下今天看到的一個畫面，不求好看。", tag:"創作" },
+  { text:"今天不喝含糖飲料，改喝白開水或無糖茶。", tag:"生活" },
+  { text:"找一部從沒看過類型的電影或短片，看完寫下一句感想。", tag:"觀察" },
+  { text:"打電話而不是傳訊息，跟一位朋友聊聊近況。", tag:"人際" },
+  { text:"今天午餐試著自己帶便當，不外食。", tag:"生活" },
+  { text:"練習五分鐘深呼吸，感受身體放鬆的過程。", tag:"冥想" },
+  { text:"寫下一個你正在害怕的事，並列出最壞的結果。", tag:"內省" },
+  { text:"撿起路上看到的一個垃圾，丟進垃圾桶。", tag:"環保" },
+  { text:"今天完全不批評自己，發現想批評時就換成中立描述。", tag:"正向" },
+  { text:"學會一個新單字或詞語，並在對話中用出來。", tag:"學習" },
+  { text:"整理手機相簿，刪除十張不需要的照片。", tag:"整理" },
+  { text:"寫一封感謝信給曾經幫助過你的人（不一定要寄出）。", tag:"感恩" },
+  { text:"嘗試用左手（或非慣用手）刷牙。", tag:"肢體" },
+  { text:"今天走樓梯代替電梯，能走多少算多少。", tag:"運動" },
+  { text:"找一個插座拔掉，練習不插電待一小時。", tag:"生活" },
+  { text:"觀察一位陌生人的穿著，猜測他今天要去哪裡（不用說出口）。", tag:"觀察" },
+  { text:"今天說話時，刻意放慢速度，讓自己聽清楚每個字。", tag:"溝通" },
+  { text:"幫家中的一個物品拍張「產品照」，練習構圖。", tag:"藝術" },
+  { text:"找一個你一直想學但沒開始的技能，搜尋並看一支入門影片。", tag:"學習" },
+  { text:"今天遇到不順的事，練習說「這也是一種經驗」。", tag:"正向" },
+  { text:"寫下三個你欣賞自己的地方。", tag:"內省" },
+  { text:"今天不使用購物網站，把想買的東西記下來三天後再看想不想買。", tag:"財務" },
+  { text:"幫一位同事或朋友做一件小事，不求回報也不說。", tag:"人際" },
+  { text:"出門時觀察天空的顏色，用一句話形容它。", tag:"感官" },
+  { text:"今天午休時間，離開座位到戶外走五分鐘。", tag:"運動" },
+  { text:"練習用身體語言表達情緒，不說話讓對方猜你的心情。", tag:"肢體" },
+  { text:"整理一份舊照片或舊物，挑一件送給需要的人或捐出去。", tag:"慷慨" },
+  { text:"今天聽一首完全陌生語言的歌，感受旋律而非歌詞。", tag:"感官" },
+  { text:"寫下這個月你想完成的一件小事，並拆成三個步驟。", tag:"行動" },
+  { text:"今天不抱怨，發現想抱怨時換成具體的解決方法。", tag:"正向" },
+  { text:"用手機拍下十張同一個東西的不同角度，選一張最喜歡的。", tag:"藝術" },
+  { text:"今天嘗試不查手機地圖，用記憶或問路找到目的地。", tag:"探索" },
+  { text:"寫一段話描述十年後的自己，越具體越好。", tag:"內省" },
+  { text:"今天午餐邀請一位不常一起吃飯的人。", tag:"社交" },
+  { text:"練習五分鐘不說「但是」，改用「而且」或直接陳述。", tag:"溝通" },
+  { text:"找一個你討厭的家事，用計時器挑戰十分鐘內完成。", tag:"行動" },
+  { text:"今天記錄自己喝了多少水，睡前檢查有沒有喝夠。", tag:"生活" },
+  { text:"寫下一句最近讓你印象深刻的話，說出為什麼。", tag:"閱讀" },
+  { text:"今天試著不用「我覺得」開頭說話，直接說重點。", tag:"溝通" },
+  { text:"找一個植物或動物觀察十分鐘，記下三個發現。", tag:"自然" },
+  { text:"睡前十分鐘不看螢幕，改成伸展或閱讀紙本。", tag:"睡眠" },
+  { text:"今天午餐前，先說出一句對食物的感謝再開始吃。", tag:"感恩" },
+  { text:"練習拒絕一件你其實不想做的小事，誠實表達。", tag:"勇氣" },
+  { text:"找一首老歌，跟著唱完整首，不管音準。", tag:"音樂" },
+  { text:"今天寫下讓自己感到驕傲的一個決定。", tag:"內省" },
+  { text:"幫自己安排半小時「什麼都不做」的空白時間。", tag:"休息" },
+  { text:"今天嘗試用手寫日記代替打字。", tag:"書寫" },
+  { text:"找一件舊衣服或物品，修補或改造讓它繼續使用。", tag:"手作" },
+  { text:"今天午餐後散步十分鐘，不帶耳機，只是走。", tag:"運動" },
+  { text:"練習在對話中多問一個「後來呢？」，聽對方多說一點。", tag:"溝通" },
+  { text:"今天早起十五分鐘，看一次日出或天光變化。", tag:"觀察" },
+  { text:"寫下你這週最耗費心力的一件事，想一個減輕的方法。", tag:"內省" },
+  { text:"今天午飯錢的十分之一，捐給你認同的機構或用於幫助他人。", tag:"慷慨" },
+  { text:"找一個你常忽略的家人，主動問他今天過得如何。", tag:"人際" },
+  { text:"今天嘗試不評價任何人（包括自己），純粹觀察。", tag:"內省" },
+  { text:"睡前寫下明天最想完成的一件事，只寫一件。", tag:"行動" },
 ];
+
+const STORAGE_KEY = 'daily-challenge-state-v1';
+const MAX_HISTORY = 20;
 
 let completedCount = 0;
 let currentChallenge = null;
 let lastChallenge = null;
-const MAX_HISTORY = 20;
-const history = [];
+let history = [];
+let isTransitioning = false;
 
-// 每日心法跑馬燈
+const els = {
+  head: document.getElementById('challengeHead'),
+  tag: document.getElementById('tagsRow'),
+  num: document.getElementById('completedNum'),
+  list: document.getElementById('historyList'),
+  rollBtn: document.getElementById('rollBtn'),
+  doneBtn: document.getElementById('doneBtn'),
+};
+
+// --- 本機儲存：重新整理頁面後保留進度 ---
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    completedCount = Number.isFinite(saved.completedCount) ? saved.completedCount : 0;
+    history = Array.isArray(saved.history) ? saved.history.slice(0, MAX_HISTORY) : [];
+    lastChallenge = saved.lastChallenge || null;
+  } catch (e) {
+    console.warn('讀取本機紀錄失敗，將從頭開始。', e);
+  }
+}
+
+function saveState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ completedCount, history, lastChallenge }));
+  } catch (e) {
+    console.warn('儲存本機紀錄失敗。', e);
+  }
+}
+
+// --- 每日心法跑馬燈 ---
 const dailyMottos = [
   "不要等「完美時機」，現在就是最好的時間點。",
   "挑戰不在於難度，在於你願意打破慣性的那一秒。",
   "完成後記得給自己一點肯定，這是真正的積累。",
   "如果今天做不到，明天重抽。沒有失敗，只有下一次。"
 ];
-const marqueeTrack = document.getElementById('marqueeTrack');
-marqueeTrack.innerHTML = [...dailyMottos, ...dailyMottos]
-  .map(m => `<span>${m}</span>`)
-  .join('');
+function renderMarquee() {
+  const track = document.getElementById('marqueeTrack');
+  const frag = document.createDocumentFragment();
+  [...dailyMottos, ...dailyMottos].forEach(m => {
+    const span = document.createElement('span');
+    span.textContent = m;
+    frag.appendChild(span);
+  });
+  track.innerHTML = '';
+  track.appendChild(frag);
+}
 
 function rollChallenge() {
+  if (isTransitioning) return;
+
   let pick;
-  if (lastChallenge) {
+  if (lastChallenge && challenges.length > 1) {
     const filtered = challenges.filter(c => c.text !== lastChallenge.text);
     pick = filtered[Math.floor(Math.random() * filtered.length)];
   } else {
@@ -284,14 +405,27 @@ function rollChallenge() {
   }
   currentChallenge = pick;
 
-  const head = document.getElementById('challengeHead');
-  head.classList.add('fading');
-  setTimeout(() => {
-    head.textContent = pick.text;
-    head.classList.remove('fading');
+  isTransitioning = true;
+  els.rollBtn.disabled = true;
+  els.head.classList.add('fading');
+  window.setTimeout(() => {
+    els.head.textContent = pick.text;
+    els.tag.textContent = pick.tag;
+    els.head.classList.remove('fading', 'is-done');
+    els.doneBtn.disabled = false;
+    els.doneBtn.textContent = '完成';
+    isTransitioning = false;
+    els.rollBtn.disabled = false;
   }, 200);
+}
 
-  document.getElementById('tagsRow').textContent = pick.tag;
+function formatDateLabel(date) {
+  const today = new Date();
+  const startOf = d => new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+  const diffDays = Math.round((startOf(today) - startOf(date)) / 86400000);
+  if (diffDays === 0) return '今天';
+  if (diffDays === 1) return '昨天';
+  return `${date.getMonth() + 1}/${date.getDate()}`;
 }
 
 function markDone() {
@@ -300,35 +434,75 @@ function markDone() {
     return;
   }
   completedCount++;
-  document.getElementById('completedNum').textContent = completedCount;
+  els.num.textContent = completedCount;
 
   const now = new Date();
   lastChallenge = currentChallenge;
 
   history.unshift({
     ...currentChallenge,
-    time: now.toLocaleTimeString('zh-TW', { hour:'2-digit', minute:'2-digit' })
+    at: now.toISOString(),
+    time: now.toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' })
   });
-  if (history.length > MAX_HISTORY) history.splice(MAX_HISTORY);
+  if (history.length > MAX_HISTORY) history.length = MAX_HISTORY;
 
   renderHistory();
+  saveState();
+
+  // 停留在目前挑戰，標示為已完成，不自動抽下一個
   currentChallenge = null;
-  rollChallenge();
+  els.head.classList.add('is-done');
+  els.doneBtn.disabled = true;
+  els.doneBtn.textContent = '已完成 ✓';
 }
 
 function renderHistory() {
-  const list = document.getElementById('historyList');
+  els.list.innerHTML = '';
   if (!history.length) {
-    list.innerHTML = '<div class="history-empty">還沒有紀錄，抽一個開始吧。</div>';
+    const empty = document.createElement('div');
+    empty.className = 'history-empty';
+    empty.textContent = '還沒有紀錄，抽一個開始吧。';
+    els.list.appendChild(empty);
     return;
   }
-  list.innerHTML = history.map(h => `
-    <div class="history-entry">
-      <span class="h-text">${h.text}</span>
-      <span class="h-time">${h.time}</span>
-    </div>
-  `).join('');
+  const frag = document.createDocumentFragment();
+  let lastLabel = null;
+
+  history.forEach(h => {
+    const entryDate = h.at ? new Date(h.at) : null;
+    const label = entryDate ? formatDateLabel(entryDate) : null;
+
+    if (label && label !== lastLabel) {
+      const dateHead = document.createElement('div');
+      dateHead.className = 'history-date';
+      dateHead.textContent = label;
+      frag.appendChild(dateHead);
+      lastLabel = label;
+    }
+
+    const entry = document.createElement('div');
+    entry.className = 'history-entry';
+
+    const textSpan = document.createElement('span');
+    textSpan.className = 'h-text';
+    textSpan.textContent = h.text;
+
+    const timeSpan = document.createElement('span');
+    timeSpan.className = 'h-time';
+    timeSpan.textContent = h.time;
+
+    entry.appendChild(textSpan);
+    entry.appendChild(timeSpan);
+    frag.appendChild(entry);
+  });
+  els.list.appendChild(frag);
 }
+
+// --- 初始化 ---
+renderMarquee();
+loadState();
+els.num.textContent = completedCount;
+renderHistory();
 </script>
 </body>
 </html>
