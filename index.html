@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="每天抽一個小挑戰，累積微小的改變。">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131313" media="(prefers-color-scheme: dark)">
+<title>日常挑戰</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'MyFreehandFont';
+  src: url(data:font/otf;base64,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jomLCH+LYKRuowh4mnOahosIhYuBgYuFCIuEkIWYggiRh5t/mIEIpXeVhaR/CJuDBWF8gIdVdghje3SBYHYIbXwFjtKLjIaRCISTg4uDgwiEhYuLikoIifsDlmKqiwiXi5WTi5QIi5GBloaLCIaLg7mLqAiLmIyOjYkIkIaUja2bCLehko69nwiilKCTjowIkY6LipVsCJJ3jXSOTAiMbIx+jogIjoiKioOHCIaJhYmJiwh6i3h+i4AIi3eriLiaCM+ikIyFhAiFhYuKjWEIjXOMd4uLCImHWYZGhwhAh4SKhoYIhISLg5ODCJKFBfcXkrmOlI0InY6OiYt+CIuHj3SPcgij+yOLi40+CI1Hi4eQhgiShJOLkpMIkJEFiPcxipFz9xsIgcGKk5GLCI6LoJCikQjUncOVo4wIoowFll2IZ35lCH5kh4R9hgh2g4V/l4AIkoWMi5yOCJWNlY6NjQiUlJuqlakIlauLi4uxCIvBgqx8jwh0kD+AK3QIUn2Qi4qVCIqPip6KnQiKroeVgIwIhoyTjr6bCMufrZSbjQivj4urZ4kIeoqLjZuaCJCQlJWQkgiRkpeZlJUIv8SKtlWPCHiMbpV8lQh8lX6OZIsIZosFq6iutouSCIuSgZWEiwiHi4SGgoEId3Vra3R2CHd5BYz3AYuMhZEIg5ODi4SECPc6+yEVkYmTh4+ICJmBrH+digiUipOKi4oIi4V6cnt4CIB/eneAfwh1cnx/gIsIgYuBgY2CCIyFioprgQh5hXqGiYoIiYqQkJORCNnHmq9rvAh9oISNV4sIX4sFjp8F3J+6jaGDCPtQZxWKiIaEhoYIgoIFhpmJkIqMCIqMopSRiwiMi4uIiocI9wlpFZOIlXiLfwiLgHhydnsIeX1da36ECIaIhIeIiQiFhwWIzYqoipYIiqAFpaSNjJiMCKmNvIuRiQj72vvEFYSEi4maaAidYJCCnXUIzDy1ZqiICKmHkKptkQh5j2+iaLMIY7mBmYCmCIWZhJuJkAiCoH2SgH8IDvp8+Zj5oRWAgIt0lnoIkISPhIuKCIuKkoCTfwiTf5R9jYYIlXeWhpWWCJSWh5ZzrghvtoiQjJkIjKF7ln9+CPujahWKin2Je4kIbYiAhouCCIuKiImIiwiFi4CBi4UIi4SoNZR5CJF+BXp6ioOTgwiShZKKkpAIkI6Mi5ODCJ15m5WLqAiLnQXV25OaiqsIiq2IjV2MCHiLeouKigj3IIYVgYCCRYxMCIxXBYKLfox/jQh1joqLhYUIeHmjfLqLCJKLkYuLiwiLi4x9jHoIjmaj+wCYagiPgpN3kXwIkXyReo2GCI2GjoKNhQiPgAV6eIB+hIIIdG5bYHB6CICEdn58ggh8gn6DiooIiouFh4WHCHZ9h4GWgQiTg5CLmJQIkY+RjoyLCIyLk5CTkQiTkZOQjIsIjIuRj5KQCJKQkY+MiwiLi5aSmJMIsKPCv6WvCI+Qj4+MiwiMi5J+knsIpk+uVJ5+CK9zr4SklwiflJKckL8IjrOTupCXCJCYi5CEkghzonpggiAIiXSGeYaICIKGdI95lAh6k4mNeaYIgJt/n4eUCHqtdLyLjQiLkLXPl5oIkpOVl5GSCKyxkJWBlQh/loCEcGgIhIN+e4KACIGAg4GLigiLiomHiIcIiIeGg4eFCIiEh4aKiwiKi4SahJ0IhJ2Co4eWCIeWhZ6ImAiImIWnhqAIhaSHooqdCIqmBbmL9wygrpYIqpWTln6YCISSgYt6hQhzgvsYc3GLCH2LBYatjcSSvAiSvQV9mYOLhIMI/FuGFYODi4mTagiQeJN3mm0ImHGSeoqKCISElXmViwiOi42Ki4oIi4eZgJCLCJCLi4uGhAiGhIuFi1MIi04Fcr2DnoqRCIW9e6B6eQiFhAWTaY58jIUIjIWWcZlvCJhwnGaTeQibZ5GClIsIm4uPoIS6CIO7i5iRiwiOi5mPmZAImZCgkJaNCJaMmI2QjAiUjQWLQIqKbYsIY4p6hIt8CIt/loadjgiUjZyMl4sIoIsFiVIF+x1VRXpTiwh0i4KGi38Ii2v3D5v3ErwIoJOeko2MCJGOjPtJhYMIfnukd5qaCJSUjJKL9AiL8wWgkaiSp5EIxpifjKGDCJ2FjouSkgidn26dWYsIc4sreXSCCIeJi42LpAiLpgWajaCNn40Iq42SjJCPCJeWgZt4iwiBiwWLz4uPkI8Ik5OEnoCLCIqLhZOFlAiAm3See5EIXZ2Ni0+LCF2LgYqGiAiGhwWLqwXPzJuhi5wIi6qBkVGOCHWNco2EjAh5jYOFi3sIi4GLi4acCIOnf5R/fgj4BmsVjH+AeHJwCHNyBXyzhJ6IlQiFnQWdj6yOnosIn4sF+29vFY2KioiFgwiCfmBfio4IiZSBsIiWCIiYBcOKnYqNigje+z4VloiTh4mKCIGIhoKLfgiLfQVohXyIhYoIf4pjf4KGCIWIBY7kh4jEiwi1i4+LnoQIvHIVloGLi32JCICKBYuaiZCHjwiFkgWYhJOFkIYIo0MVi2yLi3iACHeAi4yMswiMrwWXjZOMkYsIlowFDvp89+b5YhWGhYmFinwIiXqPRo57CIyFiot+iAhnhG6Ib4sIbouJi4aFCHNxwIHdmQicjpqNjIoIjYiP+wqLOwiLMwV7h4KIZHwIg4iCiIeKCIeKhomIiQiBhSJxZYQIVYJ8got2CIt5oXXHZAiVhJiCkYcIkIeRiIyLCIyLl4OZgQiZgqJ8mYIImYKefZWDCKV2oIKdjAigjZCRj6QIjpyX90+NwgiLngXqrJaVe5oIg5KKi2F8CHeEeoWKiwiKi4qyi7sIi7qKyYqoCIqniqOMjAiMjJuMnowIsI2UjouYCIuZgo5kighnigWFv4qyjp0IjZ2LjIWRCIOUg4uDggj4NGYVhYWLiYtACIs+BXU0fViCawhxL4Nci1YIi1qSZJd1CKNhpm+fhgiihe6OnpIIrZiYnJW2CJCdBXmeeoKIdwiDX3eBP4sIWouEjXyaCFDGiOC890IIlKqVsY+aCI6akaSPmwiTpwWL9zoFfZiEi4SECPsngxWFhQWI++uKf3uACIWHeXt7fAhpanl/dokIc4mBfJl+CJSDq42dlQialKqjj5EIjY6SkpKRCJiWBYVmhjKLXAiLXYuGhoMIhICLg5KECJODkoyTlQiXmoyRi78Ii8KOuJPOCJC5jI2SkgiUlIyThJIIh46KjoyQCIyOjdiM5QiN9zeLjIaRCISSg4uDgwj3u/tZFUNjbm2cewiUgpCNnp0IlZSWlI+NCI+NkY6PjQionpWOqYsIqouUj4uYCIuYgo5miwhpiwX8XVIVgoGOgZqCCI2KnImeiginipSKlIcImoSPi5KSCJOTi5KDkwh+mICOZ40IeIx3jYWMCIKMiYqGhgj3zPtPFYSDi4OShAj2K4aPqoQIroSdi5KTCJaWgpt6iwiGi3yNfY4IcpAFJuaEj39/CPxCbBWLhYp1incIineIW4lkCIdJinuIgAiJhnSWfpcIgJX7HOeHiwiKi4GSgJMIgJN6l4KSCIKShJKMjQiLjZ2PoY8IoI+okZiPCJmPo5Kcjwibj5yQkI0IkI2bkZqRCJuRm5GPjQiWkYuLi38IDvp8+TL5qhX7GIM3gkd+CF2DU36DhwiIin2JfIoIZ4l+f5t8CJKEt42kkwjJoPcPnvcalQjbkfc6jJqFCJWHBYv7R4psiHEIhmqKeoP7RAiJWYdPiXQIhmAFeox0jXaNCFCS+z2LSoQIU4VMgGKACHWFf4l4iwhyi3+Fi34Ii3e0icubCL2Yu5PFkQjPkvc8isiDCLCGBYt/iIWFhQiAf4qFk4MImX6lm4+jCIuQjpmOlwiTrZLrkfcoCI7Qj72PqQiOoI73ZYiYCIWqd5D7CYoIW4peioSLCPySKBWEhIxoknAIj3yeN5NnCJJqkWONbQiMfY11jH4IkkeQN4tjCIxfi4qRhgiThJKLkpIIlZWJ6H73HAiF0IuLkY0Ijoz3Aoz3F4sI956LzY2VlAiSkouTg5IIhJEFMIYiivssiwj7gosFipSJlYqUCIeqcfcKhpkIio+JmomZCIevgJd8ewgOAAJYAAABLAAAASwAAAJYAAAD6AAAAfQAAAPoAAAD6AAAA+gAAAPoAAAD6AAAAAAAAQAAAAAAAAACABQAAgAWAAVlbnpoLVRXAA==) format('opentype');
+  font-display: swap;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* 極簡黑白灰，保留一個點綴色 */
+  --ink: #161616;
+  --paper: #fafafa;
+  --line: #ebebeb;
+  --muted: #8a8a8a;
+  --accent: #d34f2c;
+  --danger: #a83246;
+  --ff: 'Noto Sans TC', -apple-system, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f0f0f0;
+    --paper: #131313;
+    --line: #2a2a2a;
+    --muted: #8f8f8f;
+    --accent: #ff8362;
+    --danger: #ff6f91;
+  }
+}
+
+html { font-size: 17px; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--ff);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 唯一的留白容器，所有內容垂直疊放，靠它呼吸 */
+.page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 14vh 32px 18vh;
+}
+
+/* 一句話標頭：取代整個 masthead，只留品牌名 */
+.top-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+.brand {
+  font-family: 'MyFreehandFont', var(--ff);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* 每日心法跑馬燈：細灰字、慢速捲動，不搶視覺重量 */
+.marquee-wrap {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right;
+}
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee-scroll 70s linear infinite;
+  padding-left: 100%;
+}
+.marquee-track span { padding: 0 24px; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; padding-left: 0; }
+}
+
+/* Hero：完成數，唯一的視覺重量來源 */
+.hero {
+  margin-bottom: 88px;
+}
+.hero .num {
+  font-size: clamp(72px, 18vw, 128px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.hero .lbl {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* 挑戰內容：沒有外框、沒有標籤色塊，純文字層級 */
+.challenge {
+  margin-bottom: 56px;
+}
+.challenge-eyebrow {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.challenge-headline {
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 14px;
+  min-height: 80px;
+  transition: opacity 0.25s ease, transform 0.25s ease, color 0.3s ease;
+}
+.challenge-headline.fading { opacity: 0; transform: translateY(6px); }
+.challenge-headline.is-done {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  animation: headline-settle 0.35s ease;
+}
+@keyframes headline-settle {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+
+/* 進行中：句子持續在主色與點綴色之間輕輕呼吸，製造「還沒做完」的催促感 */
+@keyframes headline-breathe {
+  0%, 100% { color: var(--ink); }
+  50% { color: var(--accent); }
+}
+.challenge-headline.in-progress { animation: headline-breathe 2.6s ease-in-out infinite; }
+.challenge-tag {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+.challenge-tag:empty { display: none; }
+
+/* 按鈕：無框線、無底色裝飾，靠字重與間距區分主次 */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 56px;
+}
+.btn {
+  font-family: var(--ff);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  background: none;
+  border: none;
+  padding: 12px 10px;
+  cursor: pointer;
+  color: var(--ink);
+  transition: opacity 0.15s, transform 0.1s ease;
+}
+@media (hover: hover) {
+  .btn:hover { opacity: 0.6; }
+}
+.btn:active { opacity: 0.6; transform: scale(0.93); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+.btn.primary { color: var(--ink); }
+.btn.primary.btn-cancel { color: var(--muted); }
+.btn.done { color: var(--accent); }
+
+/* 行動 → 進行中 / 完成 → 已完成：按下後的輕彈回饋，維持無框無底色 */
+@keyframes btn-pop {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+.btn.pop { animation: btn-pop 0.32s cubic-bezier(.34,1.56,.64,1); }
+
+/* 完成紀錄：固定高度可滾動，無邊框，行與行只靠留白分隔 */
+.log {
+  padding-top: 24px;
+}
+.log-head {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+#historyList {
+  max-height: 220px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+#historyList::-webkit-scrollbar { width: 6px; }
+#historyList::-webkit-scrollbar-track { background: transparent; }
+#historyList::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
+#historyList::-webkit-scrollbar-thumb:hover { background: var(--ink); }
+.history-empty {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.history-entry {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  animation: fadeIn 0.25s ease;
+}
+.history-entry .h-main { flex: 1; min-width: 0; }
+.history-entry .h-text { color: var(--ink); }
+.history-entry .h-time { color: var(--muted); font-size: 12px; margin-left: 6px; }
+.history-entry .h-del {
+  flex-shrink: 0;
+  border: none;
+  background: none;
+  font-family: var(--ff);
+  font-size: 15px;
+  line-height: 1;
+  color: var(--muted);
+  opacity: 0.45;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: opacity 0.15s, color 0.15s;
+}
+.history-entry .h-del:hover { opacity: 1; color: var(--danger); }
+.history-entry .h-del:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; opacity: 1; }
+
+.history-date {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  padding-top: 14px;
+  padding-bottom: 2px;
+}
+.history-date:first-child { padding-top: 0; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* 附加功能：自訂挑戰／投稿／刪除存檔，維持極簡但用形狀＋顏色做出區隔 */
+.util-section {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.util-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pill-btn {
+  font-family: var(--ff);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.pill-btn:hover { color: var(--accent); border-color: var(--accent); }
+.pill-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.panel {
+  display: none;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.panel.open { display: block; }
+.panel label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.panel input[type="text"],
+.panel textarea {
+  display: block;
+  width: 100%;
+  font-family: var(--ff);
+  font-size: 14px;
+  color: var(--ink);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  padding: 8px 0;
+  margin-bottom: 18px;
+  resize: none;
+}
+.panel textarea { line-height: 1.6; }
+.panel input[type="text"]:focus,
+.panel textarea:focus { outline: none; border-bottom-color: var(--accent); }
+.panel-hint {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: -10px;
+  margin-bottom: 18px;
+}
+.panel-actions { display: flex; align-items: center; gap: 24px; }
+.panel-actions .btn { font-size: 14px; }
+
+.danger-row {
+  margin-top: 32px;
+  text-align: center;
+}
+.text-btn-danger {
+  font-family: var(--ff);
+  font-size: 12px;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: color 0.15s;
+}
+.text-btn-danger:hover { color: var(--danger); }
+.text-btn-danger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 480px) {
+  .page { padding: 10vh 24px 14vh; }
+  .hero { margin-bottom: 64px; }
+  .challenge { margin-bottom: 40px; }
+  .actions { gap: 4px; }
+  .marquee-wrap { display: none; }
+}
+</style>
+</head>
+<body>
+
+<main class="page">
+  <div class="top-row">
+    <div class="brand">日常挑戰</div>
+    <div class="marquee-wrap" aria-label="每日心法">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="num" id="completedNum">0</div>
+    <div class="lbl">已完成挑戰</div>
+  </div>
+
+  <div class="challenge">
+    <div class="challenge-eyebrow">今天的挑戰</div>
+    <div class="challenge-headline" id="challengeHead" aria-live="polite">
+      按下「抽取」，看看今天要做什麼。
+    </div>
+    <div class="challenge-tag" id="tagsRow" aria-live="polite"></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn primary" id="rollBtn" onclick="onLeftBtn()" aria-label="抽取新挑戰">抽取</button>
+    <button class="btn done" id="doneBtn" onclick="onRightBtn()" aria-label="標記為進行中" disabled>行動</button>
+  </div>
+
+  <div class="log">
+    <div class="log-head">完成紀錄</div>
+    <div id="historyList" aria-live="polite" aria-label="完成紀錄">
+      <div class="history-empty">還沒有紀錄，抽一個開始吧。</div>
+    </div>
+  </div>
+
+  <div class="util-section">
+    <div class="util-row">
+      <button class="pill-btn" id="customToggleBtn" type="button">新增挑戰</button>
+      <button class="pill-btn" id="submitToggleBtn" type="button">投稿挑戰</button>
+    </div>
+
+    <div class="panel" id="customPanel">
+      <label for="customText">挑戰內容</label>
+      <input type="text" id="customText" maxlength="60" placeholder="例如：今天對自己說一句鼓勵的話。">
+      <label for="customTag">分類標籤（選填）</label>
+      <input type="text" id="customTag" maxlength="10" placeholder="例如：內省">
+      <div class="panel-actions">
+        <button class="btn primary" id="customSaveBtn" type="button">新增</button>
+        <button class="btn" id="customCancelBtn" type="button">取消</button>
+      </div>
+    </div>
+
+    <div class="panel" id="submitPanel">
+      <label for="submitText">想投稿給作者的挑戰</label>
+      <textarea id="submitText" rows="3" maxlength="120" placeholder="寫下你的挑戰點子……"></textarea>
+      <div class="panel-hint">送出後會開啟你的郵件軟體，收件人已幫你填好，直接寄出即可。</div>
+      <div class="panel-actions">
+        <button class="btn primary" id="submitSendBtn" type="button">傳送</button>
+        <button class="btn" id="submitCancelBtn" type="button">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="danger-row">
+    <button class="text-btn-danger" id="resetBtn" type="button">刪除存檔</button>
+  </div>
+</main>
+
+<script>
+const challenges = [
+  { text:"對三個陌生人微笑，觀察他們的反應。", tag:"社交" },
+  { text:"用非慣用手寫下今天的日期與自己的名字。", tag:"肢體" },
+  { text:"找一首從沒聽過的歌，完整聽完，不快轉。", tag:"感官" },
+  { text:"找出今天一個你從未注意過的美麗細節，拍下來。", tag:"觀察" },
+  { text:"吃飯時手機翻面放下，專心感受食物的味道。", tag:"專注" },
+  { text:"傳一則真心話給你好久沒聯絡的朋友。", tag:"人際" },
+  { text:"出門時刻意走一條沒走過的路，感受有什麼不同。", tag:"探索" },
+  { text:"隨機翻開一本書的某頁，讀完那一頁再放下。", tag:"閱讀" },
+  { text:"靜靜聆聽五分鐘環境聲音，不滑手機，只是聽。", tag:"冥想" },
+  { text:"做一件一直在拖延的小事，哪怕只有五分鐘。", tag:"行動" },
+  { text:"嘗試自己做一樣從沒做過的食物或飲料。", tag:"生活" },
+  { text:"主動稱讚今天遇到的某個人，說出具體的理由。", tag:"正向" },
+  { text:"寫下三件今天讓你感謝的小事，越具體越好。", tag:"感恩" },
+  { text:"用三個詞描述你今天的心情，想清楚再寫。", tag:"內省" },
+  { text:"今晚比平常早30分鐘關燈，在黑暗中靜靜想一件事。", tag:"睡眠" },
+  { text:"今天出門刻意跟一位服務人員多聊兩句，說聲謝謝。", tag:"人際" },
+  { text:"把手機通知全部關掉一整天，感受差異。", tag:"專注" },
+  { text:"寫一張紙條留給家人或室友，表達關心。", tag:"人際" },
+  { text:"整理書桌，只留下今天真正會用到的東西。", tag:"整理" },
+  { text:"用手繪的方式畫下今天看到的一個畫面，不求好看。", tag:"創作" },
+  { text:"今天不喝含糖飲料，改喝白開水或無糖茶。", tag:"生活" },
+  { text:"找一部從沒看過類型的電影或短片，看完寫下一句感想。", tag:"觀察" },
+  { text:"打電話而不是傳訊息，跟一位朋友聊聊近況。", tag:"人際" },
+  { text:"今天午餐試著自己帶便當，不外食。", tag:"生活" },
+  { text:"練習五分鐘深呼吸，感受身體放鬆的過程。", tag:"冥想" },
+  { text:"寫下一個你正在害怕的事，並列出最壞的結果。", tag:"內省" },
+  { text:"撿起路上看到的一個垃圾，丟進垃圾桶。", tag:"環保" },
+  { text:"今天完全不批評自己，發現想批評時就換成中立描述。", tag:"正向" },
+  { text:"學會一個新單字或詞語，並在對話中用出來。", tag:"學習" },
+  { text:"整理手機相簿，刪除十張不需要的照片。", tag:"整理" },
+  { text:"寫一封感謝信給曾經幫助過你的人（不一定要寄出）。", tag:"感恩" },
+  { text:"嘗試用左手（或非慣用手）刷牙。", tag:"肢體" },
+  { text:"今天走樓梯代替電梯，能走多少算多少。", tag:"運動" },
+  { text:"找一個插座拔掉，練習不插電待一小時。", tag:"生活" },
+  { text:"觀察一位陌生人的穿著，猜測他今天要去哪裡（不用說出口）。", tag:"觀察" },
+  { text:"今天說話時，刻意放慢速度，讓自己聽清楚每個字。", tag:"溝通" },
+  { text:"幫家中的一個物品拍張「產品照」，練習構圖。", tag:"藝術" },
+  { text:"找一個你一直想學但沒開始的技能，搜尋並看一支入門影片。", tag:"學習" },
+  { text:"今天遇到不順的事，練習說「這也是一種經驗」。", tag:"正向" },
+  { text:"寫下三個你欣賞自己的地方。", tag:"內省" },
+  { text:"今天不使用購物網站，把想買的東西記下來三天後再看想不想買。", tag:"財務" },
+  { text:"幫一位同事或朋友做一件小事，不求回報也不說。", tag:"人際" },
+  { text:"出門時觀察天空的顏色，用一句話形容它。", tag:"感官" },
+  { text:"今天午休時間，離開座位到戶外走五分鐘。", tag:"運動" },
+  { text:"練習用身體語言表達情緒，不說話讓對方猜你的心情。", tag:"肢體" },
+  { text:"整理一份舊照片或舊物，挑一件送給需要的人或捐出去。", tag:"慷慨" },
+  { text:"今天聽一首完全陌生語言的歌，感受旋律而非歌詞。", tag:"感官" },
+  { text:"寫下這個月你想完成的一件小事，並拆成三個步驟。", tag:"行動" },
+  { text:"今天不抱怨，發現想抱怨時換成具體的解決方法。", tag:"正向" },
+  { text:"用手機拍下十張同一個東西的不同角度，選一張最喜歡的。", tag:"藝術" },
+  { text:"今天嘗試不查手機地圖，用記憶或問路找到目的地。", tag:"探索" },
+  { text:"寫一段話描述十年後的自己，越具體越好。", tag:"內省" },
+  { text:"今天午餐邀請一位不常一起吃飯的人。", tag:"社交" },
+  { text:"練習五分鐘不說「但是」，改用「而且」或直接陳述。", tag:"溝通" },
+  { text:"找一個你討厭的家事，用計時器挑戰十分鐘內完成。", tag:"行動" },
+  { text:"今天記錄自己喝了多少水，睡前檢查有沒有喝夠。", tag:"生活" },
+  { text:"寫下一句最近讓你印象深刻的話，說出為什麼。", tag:"閱讀" },
+  { text:"今天試著不用「我覺得」開頭說話，直接說重點。", tag:"溝通" },
+  { text:"找一個植物或動物觀察十分鐘，記下三個發現。", tag:"自然" },
+  { text:"睡前十分鐘不看螢幕，改成伸展或閱讀紙本。", tag:"睡眠" },
+  { text:"今天午餐前，先說出一句對食物的感謝再開始吃。", tag:"感恩" },
+  { text:"練習拒絕一件你其實不想做的小事，誠實表達。", tag:"勇氣" },
+  { text:"找一首老歌，跟著唱完整首，不管音準。", tag:"音樂" },
+  { text:"今天寫下讓自己感到驕傲的一個決定。", tag:"內省" },
+  { text:"幫自己安排半小時「什麼都不做」的空白時間。", tag:"休息" },
+  { text:"今天嘗試用手寫日記代替打字。", tag:"書寫" },
+  { text:"找一件舊衣服或物品，修補或改造讓它繼續使用。", tag:"手作" },
+  { text:"今天午餐後散步十分鐘，不帶耳機，只是走。", tag:"運動" },
+  { text:"練習在對話中多問一個「後來呢？」，聽對方多說一點。", tag:"溝通" },
+  { text:"今天早起十五分鐘，看一次日出或天光變化。", tag:"觀察" },
+  { text:"寫下你這週最耗費心力的一件事，想一個減輕的方法。", tag:"內省" },
+  { text:"今天午飯錢的十分之一，捐給你認同的機構或用於幫助他人。", tag:"慷慨" },
+  { text:"找一個你常忽略的家人，主動問他今天過得如何。", tag:"人際" },
+  { text:"今天嘗試不評價任何人（包括自己），純粹觀察。", tag:"內省" },
+  { text:"睡前寫下明天最想完成的一件事，只寫一件。", tag:"行動" },
+];
+
+const STORAGE_KEY = 'daily-challenge-state-v1';
+const CUSTOM_KEY = 'daily-challenge-custom-v1';
+const MAX_HISTORY = 20;
+
+let completedCount = 0;
+let currentChallenge = null;
+let actionTaken = false; // 是否已按下「行動」（進行中，會自動存檔）
+let lastChallenge = null;
+let history = [];
+let customChallenges = [];
+let isTransitioning = false;
+
+const els = {
+  head: document.getElementById('challengeHead'),
+  tag: document.getElementById('tagsRow'),
+  num: document.getElementById('completedNum'),
+  list: document.getElementById('historyList'),
+  rollBtn: document.getElementById('rollBtn'),
+  doneBtn: document.getElementById('doneBtn'),
+};
+
+// --- 本機儲存：重新整理頁面後保留進度 ---
+// 注意：只有按下「行動」之後，目前這句挑戰才會被存檔；
+// 單純抽出但還沒按「行動」前重新整理，會回到尚未抽取的畫面。
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    completedCount = Number.isFinite(saved.completedCount) ? saved.completedCount : 0;
+    history = Array.isArray(saved.history) ? saved.history.slice(0, MAX_HISTORY) : [];
+    lastChallenge = saved.lastChallenge || null;
+    if (saved.activeChallenge && saved.actionTaken) {
+      currentChallenge = saved.activeChallenge;
+      actionTaken = true;
+    }
+  } catch (e) {
+    console.warn('讀取本機紀錄失敗，將從頭開始。', e);
+  }
+}
+
+function saveState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      completedCount,
+      history,
+      lastChallenge,
+      activeChallenge: actionTaken ? currentChallenge : null,
+      actionTaken
+    }));
+  } catch (e) {
+    console.warn('儲存本機紀錄失敗。', e);
+  }
+}
+
+// --- 自訂挑戰：使用者自己新增的挑戰，會加入抽取池 ---
+function loadCustom() {
+  try {
+    const raw = localStorage.getItem(CUSTOM_KEY);
+    customChallenges = raw ? JSON.parse(raw) : [];
+    if (!Array.isArray(customChallenges)) customChallenges = [];
+  } catch (e) {
+    customChallenges = [];
+  }
+}
+
+function saveCustom() {
+  try {
+    localStorage.setItem(CUSTOM_KEY, JSON.stringify(customChallenges));
+  } catch (e) {
+    console.warn('儲存自訂挑戰失敗。', e);
+  }
+}
+
+function getPool() {
+  return challenges.concat(customChallenges);
+}
+
+// --- 每日心法跑馬燈 ---
+const dailyMottos = [
+  "不要等「完美時機」，現在就是最好的時間點。",
+  "挑戰不在於難度，在於你願意打破慣性的那一秒。",
+  "完成後記得給自己一點肯定，這是真正的積累。",
+  "如果今天做不到，明天重抽。沒有失敗，只有下一次。"
+];
+function renderMarquee() {
+  const track = document.getElementById('marqueeTrack');
+  const frag = document.createDocumentFragment();
+  [...dailyMottos, ...dailyMottos].forEach(m => {
+    const span = document.createElement('span');
+    span.textContent = m;
+    frag.appendChild(span);
+  });
+  track.innerHTML = '';
+  track.appendChild(frag);
+}
+
+// 左側按鈕：還沒按「行動」前都是「抽取」（可隨時重抽），按下行動後才變成「取消」
+function onLeftBtn() {
+  if (actionTaken) {
+    cancelChallenge();
+  } else {
+    rollChallenge();
+  }
+}
+
+// 右側按鈕：剛抽出時是「行動」，按下行動後變成「完成」
+function onRightBtn() {
+  if (!currentChallenge) return;
+  if (!actionTaken) {
+    takeAction();
+  } else {
+    markDone();
+  }
+}
+
+function resetToIdle() {
+  currentChallenge = null;
+  actionTaken = false;
+  els.head.classList.remove('fading', 'is-done');
+  els.head.textContent = '按下「抽取」，看看今天要做什麼。';
+  els.tag.textContent = '';
+  els.rollBtn.textContent = '抽取';
+  els.rollBtn.classList.remove('btn-cancel');
+  els.rollBtn.setAttribute('aria-label', '抽取新挑戰');
+  els.doneBtn.textContent = '行動';
+  els.doneBtn.setAttribute('aria-label', '標記為進行中');
+  els.head.classList.remove('in-progress');
+  els.doneBtn.disabled = true;
+}
+
+function rollChallenge() {
+  if (isTransitioning || actionTaken) return;
+
+  const pool = getPool();
+  if (!pool.length) return;
+
+  let pick;
+  if (lastChallenge && pool.length > 1) {
+    const filtered = pool.filter(c => c.text !== lastChallenge.text);
+    pick = filtered[Math.floor(Math.random() * filtered.length)];
+  } else {
+    pick = pool[Math.floor(Math.random() * pool.length)];
+  }
+  currentChallenge = pick;
+  actionTaken = false;
+
+  isTransitioning = true;
+  els.rollBtn.disabled = true;
+  els.head.classList.add('fading');
+  window.setTimeout(() => {
+    els.head.textContent = pick.text;
+    els.tag.textContent = pick.tag || '';
+    els.head.classList.remove('fading', 'is-done');
+    els.doneBtn.disabled = false;
+    els.doneBtn.textContent = '行動';
+    els.doneBtn.setAttribute('aria-label', '標記為進行中');
+    isTransitioning = false;
+    els.rollBtn.disabled = false;
+  }, 200);
+}
+
+// 取消：恢復成還沒抽取前的畫面（若原本已存檔的「行動中」狀態，一併清除）
+function cancelChallenge() {
+  if (isTransitioning) return;
+  resetToIdle();
+  saveState();
+}
+
+// 行動：標記為進行中，自動存檔，退出再回來仍是同一句；此時左邊變「取消」，右邊變「完成」
+function takeAction() {
+  if (!currentChallenge || actionTaken) return;
+  actionTaken = true;
+  els.rollBtn.textContent = '取消';
+  els.rollBtn.classList.add('btn-cancel');
+  els.rollBtn.setAttribute('aria-label', '取消目前挑戰');
+  els.doneBtn.textContent = '完成';
+  els.doneBtn.setAttribute('aria-label', '標記目前挑戰已完成');
+  els.head.classList.add('in-progress');
+  popButton(els.doneBtn);
+  saveState();
+}
+
+// 觸發按鈕的輕彈回饋（重複點擊也能重新播放）
+function popButton(el) {
+  el.classList.remove('pop');
+  void el.offsetWidth; // 強制 reflow，讓動畫可以重新觸發
+  el.classList.add('pop');
+}
+
+function formatDateLabel(date) {
+  const today = new Date();
+  const startOf = d => new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+  const diffDays = Math.round((startOf(today) - startOf(date)) / 86400000);
+  if (diffDays === 0) return '今天';
+  if (diffDays === 1) return '昨天';
+  return `${date.getMonth() + 1}/${date.getDate()}`;
+}
+
+function markDone() {
+  if (!currentChallenge) return;
+  completedCount++;
+  els.num.textContent = completedCount;
+
+  const now = new Date();
+  lastChallenge = currentChallenge;
+
+  history.unshift({
+    ...currentChallenge,
+    at: now.toISOString(),
+    time: now.toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' })
+  });
+  if (history.length > MAX_HISTORY) history.length = MAX_HISTORY;
+
+  // 停留在目前挑戰，標示為已完成（橫槓樣式），不自動抽下一個
+  els.head.classList.add('is-done');
+  els.doneBtn.disabled = true;
+  els.doneBtn.textContent = '已完成 ✓';
+  els.doneBtn.setAttribute('aria-label', '已完成');
+  els.head.classList.remove('in-progress');
+  popButton(els.doneBtn);
+  els.rollBtn.textContent = '抽取';
+  els.rollBtn.classList.remove('btn-cancel');
+  els.rollBtn.setAttribute('aria-label', '抽取新挑戰');
+
+  currentChallenge = null;
+  actionTaken = false;
+
+  renderHistory();
+  saveState();
+}
+
+function renderHistory() {
+  els.list.innerHTML = '';
+  if (!history.length) {
+    const empty = document.createElement('div');
+    empty.className = 'history-empty';
+    empty.textContent = '還沒有紀錄，抽一個開始吧。';
+    els.list.appendChild(empty);
+    return;
+  }
+  const frag = document.createDocumentFragment();
+  let lastLabel = null;
+
+  history.forEach((h, idx) => {
+    const entryDate = h.at ? new Date(h.at) : null;
+    const label = entryDate ? formatDateLabel(entryDate) : null;
+
+    if (label && label !== lastLabel) {
+      const dateHead = document.createElement('div');
+      dateHead.className = 'history-date';
+      dateHead.textContent = label;
+      frag.appendChild(dateHead);
+      lastLabel = label;
+    }
+
+    const entry = document.createElement('div');
+    entry.className = 'history-entry';
+
+    const main = document.createElement('span');
+    main.className = 'h-main';
+
+    const textSpan = document.createElement('span');
+    textSpan.className = 'h-text';
+    textSpan.textContent = h.text;
+
+    const timeSpan = document.createElement('span');
+    timeSpan.className = 'h-time';
+    timeSpan.textContent = h.time;
+
+    main.appendChild(textSpan);
+    main.appendChild(timeSpan);
+
+    const delBtn = document.createElement('button');
+    delBtn.className = 'h-del';
+    delBtn.type = 'button';
+    delBtn.textContent = '×';
+    delBtn.setAttribute('aria-label', '刪除這筆紀錄');
+    delBtn.addEventListener('click', () => deleteHistoryEntry(idx));
+
+    entry.appendChild(main);
+    entry.appendChild(delBtn);
+    frag.appendChild(entry);
+  });
+  els.list.appendChild(frag);
+}
+
+// 刪除單筆完成紀錄（同步扣除累積完成數，避免兩者不一致）
+function deleteHistoryEntry(index) {
+  history.splice(index, 1);
+  completedCount = Math.max(0, completedCount - 1);
+  els.num.textContent = completedCount;
+  renderHistory();
+  saveState();
+}
+
+// --- 刪除存檔：清空進度、紀錄與目前挑戰（不影響自訂挑戰） ---
+function resetAll() {
+  const ok = window.confirm('確定要刪除所有存檔嗎？完成紀錄與累積次數都會清空，且無法復原。');
+  if (!ok) return;
+  completedCount = 0;
+  history = [];
+  lastChallenge = null;
+  resetToIdle();
+  renderHistory();
+  els.num.textContent = completedCount;
+  saveState();
+}
+
+// --- 自訂挑戰／投稿面板 ---
+const customPanel = document.getElementById('customPanel');
+const submitPanel = document.getElementById('submitPanel');
+const customToggleBtn = document.getElementById('customToggleBtn');
+const submitToggleBtn = document.getElementById('submitToggleBtn');
+const customText = document.getElementById('customText');
+const customTag = document.getElementById('customTag');
+const submitText = document.getElementById('submitText');
+
+function togglePanel(panel, otherPanel) {
+  const willOpen = !panel.classList.contains('open');
+  otherPanel.classList.remove('open');
+  panel.classList.toggle('open', willOpen);
+}
+
+customToggleBtn.addEventListener('click', () => togglePanel(customPanel, submitPanel));
+submitToggleBtn.addEventListener('click', () => togglePanel(submitPanel, customPanel));
+
+document.getElementById('customCancelBtn').addEventListener('click', () => {
+  customPanel.classList.remove('open');
+  customText.value = '';
+  customTag.value = '';
+});
+
+document.getElementById('customSaveBtn').addEventListener('click', () => {
+  const text = customText.value.trim();
+  if (!text) { customText.focus(); return; }
+  const tag = customTag.value.trim() || '自訂';
+  customChallenges.push({ text, tag });
+  saveCustom();
+  customText.value = '';
+  customTag.value = '';
+  customPanel.classList.remove('open');
+});
+
+document.getElementById('submitCancelBtn').addEventListener('click', () => {
+  submitPanel.classList.remove('open');
+  submitText.value = '';
+});
+
+document.getElementById('submitSendBtn').addEventListener('click', () => {
+  const text = submitText.value.trim();
+  if (!text) { submitText.focus(); return; }
+  const subject = encodeURIComponent('來自App的挑戰投稿');
+  const body = encodeURIComponent('我想投稿一個挑戰：\n\n' + text);
+  window.location.href = 'mailto:markstseng0@gmail.com?subject=' + subject + '&body=' + body;
+  submitText.value = '';
+  submitPanel.classList.remove('open');
+});
+
+document.getElementById('resetBtn').addEventListener('click', resetAll);
+
+// --- 初始化 ---
+renderMarquee();
+loadCustom();
+loadState();
+els.num.textContent = completedCount;
+renderHistory();
+
+// 還原「行動中」的挑戰（唯有按過「行動」才會被存檔還原）
+if (currentChallenge && actionTaken) {
+  els.head.classList.remove('fading', 'is-done');
+  els.head.textContent = currentChallenge.text;
+  els.tag.textContent = currentChallenge.tag || '';
+  els.rollBtn.textContent = '取消';
+  els.rollBtn.classList.add('btn-cancel');
+  els.rollBtn.setAttribute('aria-label', '取消目前挑戰');
+  els.doneBtn.disabled = false;
+  els.doneBtn.textContent = '完成';
+  els.doneBtn.setAttribute('aria-label', '標記目前挑戰已完成');
+  els.head.classList.add('in-progress');
+} else {
+  resetToIdle();
+}
+</script>
+</body>
+</html>
